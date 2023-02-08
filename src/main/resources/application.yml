@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-otp
+  main:
+    web-application-type: none
+logging:
+  file:
+    name: ${spring.application.name}/console.log
+  pattern:
+    rolling-file-name: ${LOG_FILE}.%d{yyyy-MM-dd}.%i.log
+    # ANSI颜色支持，file的pattern从https://codecentric.github.io/spring-boot-admin/current/#logfile摘抄，不要使用console的pattern
+#    file: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID}){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+#  level:
+#    com.chinaums.perf.dao: TRACE
